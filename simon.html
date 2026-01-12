@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link id="theme-link" rel="stylesheet" href="light.css" />
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeLink = document.getElementById("theme-link");
+        const btnLight = document.getElementById("light");
+        const btnDark = document.getElementById("dark");
+
+        // Load saved theme (optional)
+        const saved = localStorage.getItem("theme");
+        if (saved) themeLink.href = saved;
+
+        btnLight.addEventListener("click", () => {
+          themeLink.href = "light.css";
+          localStorage.setItem("theme", "light.css");
+        });
+
+        btnDark.addEventListener("click", () => {
+          themeLink.href = "dark.css";
+          localStorage.setItem("theme", "dark.css");
+        });
+      });
+    </script>
+    <title>simon say game</title>
+  </head>
+
+  <body>
+    <h1>PLAY SIMON SAY HERE</h1>
+    <div id="main">
+      <div id="left">
+        <div id="main-1">
+          <section id="s1">
+            <label id="input-user">
+              Username:
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter Player Name"
+              />
+              <button id="done">Done</button>
+            </label>
+            <h3 id="welcome-msg">Hey! Player1</h3>
+          </section>
+
+          <section id="s2">
+            <p>Difficulty Mode:</p>
+            <div>
+              <label>
+                <input type="radio" name="mode" value="easy" checked />
+                Easy
+                <span id="clr4">4 Colors</span>
+              </label>
+              <label>
+                <input type="radio" name="mode" value="medium" />
+                Medium
+                <span id="clr6">6 Colors</span>
+              </label>
+              <label>
+                <input type="radio" name="mode" value="hard" />
+                Hard
+                <span id="clr9">9 Colors</span>
+              </label>
+            </div>
+          </section>
+
+          <section id="s3">
+            <div id="reverse-simon-div">
+              <p>Try Reverse Simon:</p>
+              <label for="reverse-simon">Enable</label>
+              <input type="checkbox" id="reverse-simon" />
+            </div>
+            <h5 style="font-weight: 300">
+              (In reverse simon, you have to repeat the sequence in reverse
+              order)
+            </h5>
+          </section>
+
+          <section id="s4">
+            <div id="LorDmode">
+              <button id="light">Light Mode</button>
+              <button id="dark">Dark Mode</button>
+            </div>
+          </section>
+
+          <section id="s5">
+            <p>Don't Know How to Play Simon Say?</p>
+            <button id="help">Help</button>
+          </section>
+        </div>
+      </div>
+
+      <div id="right">
+        <div id="show-msg">
+          <div id="message">Welcome to Simon Say Game!</div>
+          <button class="start">Start Game</button>
+        </div>
+        <div id="main-2">
+          <div id="main-2-1">
+            <div
+              class="color"
+              id="red"
+              style="background-color: rgba(255, 0, 0, 0.756); color: white"
+            >
+              RED
+            </div>
+            <div
+              class="color"
+              id="yellow"
+              style="background-color: rgb(218, 200, 0); color: black"
+            >
+              YELLOW
+            </div>
+          </div>
+          <div id="main-2-2">
+            <div
+              class="color"
+              id="green"
+              style="background-color: rgba(0, 128, 0, 0.772); color: white"
+            >
+              GREEN
+            </div>
+            <div
+              class="color"
+              id="blue"
+              style="background-color: rgba(20, 20, 173, 0.685); color: white"
+            >
+              BLUE
+            </div>
+          </div>
+        </div>
+        <div id="main-3" hidden>
+          <div id="main-3-1">
+            <div
+              class="color"
+              id="purple"
+              style="background-color: rgba(128, 0, 128, 0.781); color: white"
+            >
+              PURPLE
+            </div>
+            <div
+              class="color"
+              id="orange"
+              style="background-color: rgba(255, 166, 0, 0.813); color: black"
+            >
+              ORANGE
+            </div>
+            <div
+              class="color"
+              id="cyan"
+              style="background-color: rgb(0, 203, 203); color: black"
+            >
+              CYAN
+            </div>
+          </div>
+          <div id="main-3-2">
+            <div
+              class="color"
+              id="pink"
+              style="background-color: rgba(255, 192, 203, 0.874); color: black"
+            >
+              PINK
+            </div>
+            <div
+              class="color"
+              id="lime"
+              style="background-color: rgb(0, 165, 0); color: white"
+            >
+              LIME
+            </div>
+            <div
+              class="color"
+              id="teal"
+              style="background-color: teal; color: white"
+            >
+              TEAL
+            </div>
+          </div>
+        </div>
+        <div id="main-4" hidden>
+          <div id="main-4-1">
+            <div
+              class="color"
+              id="magenta"
+              style="background-color: rgba(222, 0, 222, 0.774); color: white"
+            >
+              MAGENTA
+            </div>
+            <div
+              class="color"
+              id="indigo"
+              style="background-color: rgba(98, 0, 167, 0.632); color: white"
+            >
+              INDIGO
+            </div>
+            <div
+              class="color"
+              id="amber"
+              style="background-color: #ffc928d5; color: black"
+            >
+              AMBER
+            </div>
+          </div>
+          <div id="main-4-2">
+            <div
+              class="color"
+              id="navy"
+              style="background-color: rgb(168, 168, 215); color: black"
+            >
+              NAVY
+            </div>
+            <div
+              class="color"
+              id="coral"
+              style="background-color: coral; color: black"
+            >
+              CORAL
+            </div>
+            <div
+              class="color"
+              id="mint"
+              style="background-color: #2ecc71; color: black"
+            >
+              MINT
+            </div>
+          </div>
+          <div id="main-4-3">
+            <div
+              class="color"
+              id="slate"
+              style="background-color: #64748b; color: white"
+            >
+              SLATE
+            </div>
+            <div
+              class="color"
+              id="violet"
+              style="background-color: rgb(72, 46, 72); color: white"
+            >
+              VIOLET
+            </div>
+            <div
+              class="color"
+              id="crimson"
+              style="background-color: #dc143cad; color: white"
+            >
+              CRIMSON
+            </div>
+          </div>
+        </div>
+        <div id="show-levl">
+          <h3 id="level">Level 1</h3>
+          <p>Your Highest Score: <span id="high-score">0</span></p>
+        </div>
+
+        <div id="main-5" hidden>
+          <section class="game-info">
+            <h2>Know About Simon Says</h2>
+            <p>
+              Simon Says is a classic memory game where players repeat sequences
+              of colors and sounds. The challenge increases as the sequence
+              grows longer. Stay sharp and test your memory!
+            </p>
+
+            <h3>Game Rules</h3>
+            <ul>
+              <li>Click "Start Game" to begin.</li>
+              <li>Watch the sequence of colors and sounds carefully.</li>
+              <li>Repeat the exact sequence by clicking the buttons.</li>
+              <li>If you succeed, the sequence gets longer.</li>
+              <li>One mistake ends the round — try again!</li>
+            </ul>
+
+            <div class="tutorial-video">
+              <h3>Watch Tutorial Here</h3>
+              <iframe
+                width="288"
+                height="162"
+                src="https://www.youtube.com/embed/oI0MlnQq7-o"
+                title="Simon Says Tutorial"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="simon.js"></script>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px !important;
+  color: whitesmoke;
+  background-color: rgb(30, 30, 30);
+}
+
+[hidden] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+#main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#main-2-2,
+#main-2-1,
+#main-3-1,
+#main-3-2,
+#main-4-1,
+#main-4-2,
+#main-4-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+b, 
+span {
+  background-color: rgb(44, 44, 44);
+}
+
+body > h1 {
+  letter-spacing: 20px;
+  font-weight: bolder;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: rgb(44, 44, 44);
+  box-shadow: 0 0 10px gray;
+}
+
+#left {
+  width: 35%;
+  min-height: 500px;
+}
+#right {
+  width: 50%;
+  background-color: rgb(44, 44, 44);
+  min-height: 500px;
+}
+#main-1 {
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+#main-1 section {
+  background-color: rgb(44, 44, 44);
+  border-radius: 15px;
+  padding: 18px 18px;
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 1px whitesmoke;
+}
+#s1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 80px;
+}
+#input-user {
+  background-color: rgb(44, 44, 44);
+}
+#username {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 0.5px whitesmoke;
+  margin-right: 30px;
+}
+#username:focus {
+  outline: none;
+  border: solid 1.5px rgb(0, 197, 0);
+}
+#done {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 1.5px rgb(0, 197, 0);
+  background-color: rgb(44, 44, 44);
+  cursor: pointer;
+  color: rgb(0, 197, 0);
+  font-weight: bold;
+}
+#done:hover {
+  background-color: rgb(34, 34, 34);
+}
+#s2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 80px;
+}
+#s2 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#s2 label {
+  font-weight: bold;
+  padding: 8px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+#s2 input {
+  display: none;
+}
+#s2 span {
+  font-weight: lighter;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+#clr4 {
+  background-color: #009a5f;
+}
+#clr6 {
+  background-color: #c16528;
+}
+#clr9 {
+  background-color: #ad000e;
+}
+#s2 label:has(> input:checked) {
+  background-color: rgb(69, 69, 69);
+}
+#s2 > div {
+  background-color: rgb(44, 44, 44);
+}
+#s2 label:hover {
+  border: solid 1px whitesmoke;
+  cursor: pointer;
+}
+
+#s3 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#reverse-simon-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(44, 44, 44);
+}
+#reverse-simon {
+  display: none;
+}
+#reverse-simon-div label {
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgb(215, 0, 0);
+  background-color: rgb(69, 69, 69);
+}
+#reverse-simon-div label:hover {
+  border: rgb(215, 0, 0) 1px solid;
+}
+#reverse-simon-div:has(> #reverse-simon:checked) label {
+  box-shadow: 0 0 5px gray;
+}
+#LorDmode {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#LorDmode button {
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  width: 50%;
+  padding: 15px 0;
+}
+#light {
+  color: rgb(44, 44, 44);
+  background-color: whitesmoke;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#dark {
+  color: whitesmoke;
+  background-color: rgb(30, 30, 30);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#LorDmode button:hover {
+  box-shadow: 0 0 5px gray;
+}
+#s5 {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: center;
+}
+#help {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: solid 1.5px rgb(82, 82, 212);
+  cursor: pointer;
+  color: rgb(82, 82, 212);
+  font-weight: bold;
+  background-color: rgb(44, 44, 44);
+}
+#help:hover {
+  background-color: rgb(30, 30, 30);
+}
+
+#right {
+  border-radius: 15px;
+  background-color: rgba(44, 44, 44);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+#show-msg {
+  min-height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 15px;
+  background-color: rgba(44, 44, 44);
+}
+#message {
+  width: 100%;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+.start {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(169, 25, 25);
+  color: white;
+  box-shadow: 0 2px 5px rgb(88, 88, 88);
+  max-height: 100px;
+}
+.start:hover {
+  box-shadow: none;
+}
+#level {
+  text-align: center;
+  font-size: 20px;
+}
+#show-levl {
+  margin-top: 15px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgba(44, 44, 44);
+}
+.color {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 25px;
+  cursor: pointer;
+}
+.color.flash {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px gray;
+}
+#main-2,
+#main-3,
+#main-4 {
+  border-radius: 15px;
+  box-shadow: 0 0 3px rgb(100, 100, 100);
+  padding: 10px 0;
+}
+
+.game-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  text-align: center;
+  line-height: 1.5;
+  background-color: rgb(44, 44, 44);
+}
+.game-info > h2 {
+  font-size: 24px;
+}
+.game-info > p {
+  padding: 20px 10px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+  font-size: 18px;
+}
+.game-info > ul {
+  background-color: rgb(44, 44, 44);
+}
+.game-info > ul > li {
+  font-size: 16px;
+  text-align: left;
+  padding: 5px 0;
+  list-style-type: none;
+  padding-left: 40px;
+  border-radius: 5px;
+  background-color: rgb(59, 59, 59);
+  margin: 10px 0;
+  box-shadow: 0 0 5px gray;
+  border-right: wheat 5px solid;
+}
+.tutorial-video {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(44, 44, 44);
+}
+.tutorial-video iframe {
+  border-radius: 5px;
+}
