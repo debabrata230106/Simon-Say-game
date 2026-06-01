@@ -15,9 +15,11 @@ let currlevl = 1;
 let seq = []; // comp sequence
 let playerSeq = []; // player sequence
 
+const body = document.body;
 const main2 = document.querySelector("#main-2");
 const main3 = document.querySelector("#main-3");
 const main4 = document.querySelector("#main-4");
+const main5 = document.querySelector("#main-5");
 const showMsg = document.querySelector("#show-msg");
 const showLev = document.querySelector("#show-levl");
 const light = document.querySelector("#light");
@@ -29,9 +31,20 @@ const strtBtn = document.querySelector(".start");
 const colors = document.querySelectorAll(".color");
 const doneBtn = document.querySelector("#done");
 const welcm = document.querySelector("#welcome-msg");
-const themeLink = document.getElementById("theme-link");
+// const themeLink = document.getElementById("theme-link");
 const help = document.querySelector("#help");
 const highScore = document.querySelector("#high-score");
+const backBtn = document.querySelector("#back");
+const menu = document.querySelector("#menu");
+const left = document.querySelector("#left");
+
+//local storage for theme
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+    body.classList.add("dark");
+} else {
+    body.classList.remove("dark");
+}
 
 function setMode() {
   let checkedMode = document.querySelector('input[name="mode"]:checked'); // checked mode
@@ -181,7 +194,6 @@ doneBtn.addEventListener("click", () => {
 });
 // help button toggle
 help.addEventListener("click", () => {
-  const main5 = document.querySelector("#main-5");
   main5.hidden = !main5.hidden;
   if (main5.hidden == false) {
     showLev.hidden = true;
@@ -195,9 +207,42 @@ help.addEventListener("click", () => {
     setMode();
   }
 });
+backBtn.addEventListener("click", () => {
+  main5.hidden = true;
+  showLev.hidden = false;
+  showMsg.hidden = false;
+  setMode();
+});
+
 // reverse simon toggle
 const revsimon = document.querySelector("#reverse-simon-div label");
 let rev = document.querySelector("#reverse-simon");
 rev.addEventListener("change", () => {
   revsimon.textContent = rev.checked ? "Disable" : "Enable";
+});
+
+menu.addEventListener("click", () => {
+  left.classList.add("visible");
+});
+const closeBtn = document.querySelector("#close");
+document.addEventListener("click", (e) => {
+
+    // if clicked outside sidebar and outside open button
+    if (
+        !left.contains(e.target) &&
+        !menu.contains(e.target)
+    ) {
+        left.classList.remove("visible");
+    }
+
+});
+
+// light/dark mode toggle
+light.addEventListener("click", () => {
+  body.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+});
+dark.addEventListener("click", () => {
+  body.classList.add("dark");
+  localStorage.setItem("theme", "dark");
 });
