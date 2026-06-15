@@ -74,10 +74,10 @@ body > h1 {
   text-align: center;
   background-color: rgb(230, 230, 230);
 }
-/* body.dark > h1 {
+body.dark > h1 {
   background-color: rgb(44, 44, 44);
   box-shadow: 0 0 5px gray;
-} */
+}
 
 #menu {
   cursor: pointer;
@@ -89,11 +89,18 @@ body > h1 {
   background-color: rgb(230, 230, 230);
   border-radius: 15px;
 }
+body.dark #menu {
+  background-color: rgb(59, 59, 59);
+}
+
 #menu > i {
   font-size: 22px;
   color: rgb(51, 20, 0);
   padding: 10px;
   border-radius: 15px;
+}
+body.dark #menu > i {
+  color: rgb(230, 230, 230);
 }
 
 #left {
@@ -103,6 +110,9 @@ body > h1 {
   flex-direction: column;
   gap: 10px;
   margin-right: 10px;
+}
+body.dark #left {
+  background-color: rgb(40, 40, 40);
 }
 
 #right {
@@ -114,9 +124,9 @@ body > h1 {
   padding: 15px 20px;
   flex-grow: 1;
 }
-/* body.dark #right {
-  background-color: rgb(44, 44, 44);
-} */
+body.dark #right {
+  background-color: rgb(59, 59, 59);
+}
 
 #left > div {
   background-color: rgba(230, 230, 230, 0.7);
@@ -125,6 +135,11 @@ body > h1 {
   text-align: center;
   border-bottom: solid 1px gray;
 }
+body.dark #left > div {
+  background-color: rgba(59, 59, 59);
+  border-bottom: solid 1px gray;
+}
+
 #s1 {
   display: flex;
   flex-direction: column;
@@ -142,6 +157,11 @@ body > h1 {
   border-radius: 5px;
   border: solid 1px gray;
 }
+body.dark #username {
+  background-color: rgb(69, 69, 69);
+  color: whitesmoke;
+  border: solid 1px gray;
+}
 #username:focus {
   outline: none;
   border: solid 1.5px green;
@@ -155,9 +175,19 @@ body > h1 {
   color: green;
   font-weight: bold;
 }
+body.dark #done {
+  background-color: rgb(69, 69, 69);
+  color: rgb(169, 255, 169);
+}
+
 #done:hover {
   background-color: rgb(229, 255, 229);
 }
+body.dark #done:hover {
+  background-color: rgb(69, 69, 69);
+  box-shadow: 0 0 5px gray;
+}
+
 #s2 {
   display: flex;
   flex-direction: column;
@@ -181,6 +211,12 @@ body > h1 {
   gap: 5px;
   border: solid 1px whitesmoke;
 }
+body.dark #s2 label {
+  background-color: rgb(69, 69, 69);
+  color: whitesmoke;
+  border: solid 1px rgb(69, 69, 69);
+}
+
 #s2 input {
   display: none;
 }
@@ -199,11 +235,17 @@ body > h1 {
 #clr9 {
   background-color: #f79ca3;
 }
+body.dark #s2 span {
+  color: rgb(69, 69, 69);
+}
 #s2 label:has(> input:checked) {
   background-color: rgb(255, 246, 246);
   border: solid 1px gray;
 }
-#s2 label:hover {
+body.dark #s2 label:has(> input:checked) {
+  background-color: rgb(69, 69, 69);
+}
+body.dark #s2 label:hover {
   border: solid 1px gray;
   cursor: pointer;
 }
@@ -230,13 +272,23 @@ body > h1 {
   cursor: pointer;
   color: rgb(215, 56, 56);
   background-color: white;
+  border: white 1px solid;
+}
+body.dark #reverse-simon-div label {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 169, 169);
+  border: rgb(59, 59, 59) 1px solid;
 }
 #reverse-simon-div label:hover {
   border: rgb(215, 56, 56) 1px solid;
 }
+body.dark #reverse-simon-div label:hover {
+  border: rgb(255, 169, 169) 1px solid;
+}
 #reverse-simon-div:has(> #reverse-simon:checked) label {
   box-shadow: 0 0 5px gray;
 }
+
 #LorDmode {
   display: flex;
   flex-direction: row;
@@ -280,8 +332,16 @@ body > h1 {
   font-weight: bold;
   flex-shrink: 0;
 }
+body.dark #help {
+  background-color: rgb(59, 59, 59);
+  color: rgb(169, 169, 255);
+  border: solid 1px rgb(169, 169, 255);
+}
 #help:hover {
   background-color: rgb(227, 227, 255);
+}
+body.dark #help:hover {
+  box-shadow: 0 0 5px gray;
 }
 
 #show-msg {
@@ -301,6 +361,10 @@ body > h1 {
   padding: 15px;
   text-align: center;
   font-size: 25px;
+}
+body.dark #message {
+  background-color: rgb(69, 69, 69);
+  color: whitesmoke;
 }
 .start {
   padding: 5px 10px;
@@ -352,6 +416,11 @@ body > h1 {
   box-shadow: 0 0 3px rgb(100, 100, 100);
   padding: 10px 0;
 }
+body.dark #main-2,
+body.dark #main-3,
+body.dark #main-4 {
+  background-color: rgb(46, 46, 46);
+}
 
 .game-info {
   display: flex;
@@ -380,6 +449,11 @@ body > h1 {
   border-radius: 5px;
   font-size: 18px;
 }
+body.dark .game-info > p {
+  background-color: rgb(69, 69, 69);
+  color: whitesmoke;
+}
+
 .game-info > ul > li {
   font-size: 16px;
   text-align: left;
@@ -392,6 +466,13 @@ body > h1 {
   border-right: navy 5px solid;
   border-left: navy 5px solid;
 }
+body.dark .game-info > ul > li {
+  background-color: rgb(69, 69, 69);
+  color: whitesmoke;
+  border-right: rgb(169, 169, 255) 5px solid;
+  border-left: rgb(169, 169, 255) 5px solid;
+}
+
 .tutorial-video {
   display: flex;
   flex-direction: row;
